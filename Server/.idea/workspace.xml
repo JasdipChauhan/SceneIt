@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82acf8ae-65bc-4a5d-8c68-0e964f1feabd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Database/database.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../iOSApplication/SceneIt/SceneIt/ViewController.swift" afterPath="$PROJECT_DIR$/../iOSApplication/SceneIt/SceneIt/RegistrationViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOSApplication/SceneIt/SceneIt.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/../iOSApplication/SceneIt/SceneIt.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOSApplication/SceneIt/SceneIt/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/../iOSApplication/SceneIt/SceneIt/Base.lproj/Main.storyboard" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -221,12 +220,12 @@
       <option name="presentableId" value="Default" />
       <updated>1492798069733</updated>
       <workItem from="1492798072675" duration="5885000" />
-      <workItem from="1492914228168" duration="901000" />
+      <workItem from="1492914228168" duration="1318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6786000" />
+    <option name="totallyTimeSpent" value="7203000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -238,7 +237,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="23" width="1280" height="691" extended-state="6" />
+    <frame x="-2" y="23" width="1280" height="691" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2536349" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
