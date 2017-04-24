@@ -53,6 +53,35 @@ class access {
         }
 
     }
+
+    //Inserting user to db
+    public function registerUser($username, $password, $salt, $email, $fullname) {
+
+        $sql = "INSERT INTO Users SET username=?, password=?, salt=?, email=?, fullname=?";
+        $statement = $this->dbConn->prepare($sql);
+
+        if (!$statement) {
+            throw new Exception($statement->error);
+        }
+
+        //binding 5 parameters of type string to sql command
+        $statement->bind_param("sssss", $username, $password, $salt, $email, $fullname);
+
+        return $statement->execute();
+    }
+
+    //select user information
+    public function selectUser($username) {
+        $sql = "SELECT * FROM Users WHERE username='".$username."'";
+        $result = $this->dbConn->query($sql);
+
+        if ($result != null && (mysqli_num_rows($result) >= 1)) {
+            $row = $result->fetch_array(MYSQLI_ASSOC);
+        }
+
+        return $row;
+
+    }
 }
 
 ?>
