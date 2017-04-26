@@ -17,10 +17,12 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     
+    //Singletons
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +52,7 @@ class RegistrationViewController: UIViewController {
         } else {
             
             // create the new user in MySQL DB
-            
+            Backend.getInstance().registerUser(username: usernameTextField.text!.lowercased(), password: passwordTextField.text!.lowercased(), email: emailTextField.text!.lowercased(), fullname: firstNameTextField.text!.appending(" ".appending(lastNameTextField.text!.lowercased())).lowercased())
             
         }
         

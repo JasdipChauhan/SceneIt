@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6927BEF72F141FE197188929 /* Pods_SceneIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39F7A44C0C7B27FB07BF551 /* Pods_SceneIt.framework */; };
+		DE0977831EB01E9500195707 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0977821EB01E9500195707 /* Backend.swift */; };
 		DE7539F31EAC4DAC00A50718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7539F21EAC4DAC00A50718 /* AppDelegate.swift */; };
 		DE7539F51EAC4DAC00A50718 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7539F41EAC4DAC00A50718 /* RegistrationViewController.swift */; };
 		DE7539F81EAC4DAC00A50718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7539F61EAC4DAC00A50718 /* Main.storyboard */; };
@@ -15,6 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		154FFDF744E2AE852CFC1B6A /* Pods-SceneIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SceneIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-SceneIt/Pods-SceneIt.release.xcconfig"; sourceTree = "<group>"; };
+		409E57F990601271532D6B00 /* Pods-SceneIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SceneIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SceneIt/Pods-SceneIt.debug.xcconfig"; sourceTree = "<group>"; };
+		C39F7A44C0C7B27FB07BF551 /* Pods_SceneIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SceneIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE0977821EB01E9500195707 /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
 		DE7539EF1EAC4DAC00A50718 /* SceneIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7539F21EAC4DAC00A50718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE7539F41EAC4DAC00A50718 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6927BEF72F141FE197188929 /* Pods_SceneIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26D9F4012CAABBCAA8AEB122 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C39F7A44C0C7B27FB07BF551 /* Pods_SceneIt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A814FFC71992BF4EC459A55A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				409E57F990601271532D6B00 /* Pods-SceneIt.debug.xcconfig */,
+				154FFDF744E2AE852CFC1B6A /* Pods-SceneIt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DE7539E61EAC4DAC00A50718 = {
 			isa = PBXGroup;
 			children = (
 				DE7539F11EAC4DAC00A50718 /* SceneIt */,
 				DE7539F01EAC4DAC00A50718 /* Products */,
+				A814FFC71992BF4EC459A55A /* Pods */,
+				26D9F4012CAABBCAA8AEB122 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +80,7 @@
 		DE7539F11EAC4DAC00A50718 /* SceneIt */ = {
 			isa = PBXGroup;
 			children = (
+				DE7E6A481EB01FBC00E13253 /* Clients */,
 				DE7539F41EAC4DAC00A50718 /* RegistrationViewController.swift */,
 				DE7539F21EAC4DAC00A50718 /* AppDelegate.swift */,
 				DE7539F61EAC4DAC00A50718 /* Main.storyboard */,
@@ -64,6 +91,14 @@
 			path = SceneIt;
 			sourceTree = "<group>";
 		};
+		DE7E6A481EB01FBC00E13253 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				DE0977821EB01E9500195707 /* Backend.swift */,
+			);
+			name = Clients;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE753A011EAC4DAC00A50718 /* Build configuration list for PBXNativeTarget "SceneIt" */;
 			buildPhases = (
+				6CD4FFEBC4915A021C82F0F5 /* [CP] Check Pods Manifest.lock */,
 				DE7539EB1EAC4DAC00A50718 /* Sources */,
 				DE7539EC1EAC4DAC00A50718 /* Frameworks */,
 				DE7539ED1EAC4DAC00A50718 /* Resources */,
+				184BDF41AC25A624BC70741D /* [CP] Embed Pods Frameworks */,
+				44CECB607E6B100B7D767D3D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +169,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		184BDF41AC25A624BC70741D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SceneIt/Pods-SceneIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44CECB607E6B100B7D767D3D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SceneIt/Pods-SceneIt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CD4FFEBC4915A021C82F0F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DE7539EB1EAC4DAC00A50718 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +224,7 @@
 			files = (
 				DE7539F51EAC4DAC00A50718 /* RegistrationViewController.swift in Sources */,
 				DE7539F31EAC4DAC00A50718 /* AppDelegate.swift in Sources */,
+				DE0977831EB01E9500195707 /* Backend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +345,7 @@
 		};
 		DE753A021EAC4DAC00A50718 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 409E57F990601271532D6B00 /* Pods-SceneIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SceneIt/Info.plist;
@@ -270,6 +358,7 @@
 		};
 		DE753A031EAC4DAC00A50718 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 154FFDF744E2AE852CFC1B6A /* Pods-SceneIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SceneIt/Info.plist;
@@ -299,6 +388,7 @@
 				DE753A031EAC4DAC00A50718 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
