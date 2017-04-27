@@ -52,7 +52,10 @@ class RegistrationViewController: UIViewController {
         } else {
             
             // create the new user in MySQL DB
-            Backend.getInstance().registerUser(username: usernameTextField.text!.lowercased(), password: passwordTextField.text!.lowercased(), email: emailTextField.text!.lowercased(), fullname: firstNameTextField.text!.appending(" ".appending(lastNameTextField.text!.lowercased())).lowercased())
+            Backend.getInstance().registerUser(username: usernameTextField.text!.lowercased(),
+                                               password: passwordTextField.text!.lowercased(),
+                                               email: emailTextField.text!.lowercased(),
+                                               fullname: firstNameTextField.text!.appending("%20".appending(lastNameTextField.text!.lowercased())).lowercased())
             
         }
         

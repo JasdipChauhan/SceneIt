@@ -30,22 +30,44 @@ public class Backend {
     
     
     func registerUser(username: String, password: String, email: String, fullname: String) {
+    
         
-        let parameterBundle = [
-            "username" : username,
-            "password" : password,
-            "email" : email,
-            "fullname" : fullname
-        ]
+        guard let requestUrl = URL(string: baseURL) else { return }
+        let request = URLRequest(url:requestUrl)
         
-        Alamofire.request(baseURL, method: .post, parameters: parameterBundle, encoding: JSONEncoding.default, headers: nil).responseJSON(completionHandler: {
-                response in
+        URLSession.shared.dataTask(with: request, completionHandler: {
+            (data, response, error) in
             
-            print (response)
+            if error != nil {
+                print ("Error")
+                return
+            }
             
             
+            //callback to UI thread
+            DispatchQueue.main.async( execute: {
+    
+                
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                    
+                    guard let parsedJson = json else {
+                        print ("Error while parsing")
+                        return
+                    }
+                    
+                    print(parsedJson)
+                    
+                    
+                } catch {
+                    print ("caught an error\(error)")
+                }
+                
+            })
             
-        })
+            
+        }).resume()
+    
         
     }
 
