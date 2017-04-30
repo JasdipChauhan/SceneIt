@@ -4,8 +4,6 @@
     <list default="true" id="82acf8ae-65bc-4a5d-8c68-0e964f1feabd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOSApplication/SceneIt/SceneIt/Backend.swift" afterPath="$PROJECT_DIR$/../iOSApplication/SceneIt/SceneIt/Backend.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOSApplication/SceneIt/SceneIt/Info.plist" afterPath="$PROJECT_DIR$/../iOSApplication/SceneIt/SceneIt/Info.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../iOSApplication/SceneIt/SceneIt/RegistrationViewController.swift" afterPath="$PROJECT_DIR$/../iOSApplication/SceneIt/SceneIt/RegistrationViewController.swift" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,8 +29,8 @@
       <file leaf-file-name="access.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/secure/access.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="73" column="30" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="30" />
+            <state relative-caret-position="795">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="30" />
               <folding>
                 <element signature="e#6#92#0#PHP" expanded="true" />
                 <marker date="1493001722000" expanded="true" signature="1313:1358" ph="INSERT INTO Users... " />
@@ -48,12 +46,22 @@
       <file leaf-file-name="register.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <marker date="1493000424000" expanded="true" signature="981:1634" ph="..." />
                 <marker date="1493000424000" expanded="true" signature="1070:1634" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SceneIt.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SceneIt.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,7 +91,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1280" />
-    <option name="height" value="702" />
+    <option name="height" value="695" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -101,8 +109,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -140,7 +148,7 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.register.php">
+  <component name="RunManager" selected="JavaScript Debug.register.php (1)">
     <configuration default="false" name="main.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Server/main.php">
       <method />
     </configuration>
@@ -151,6 +159,9 @@
       <method />
     </configuration>
     <configuration default="false" name="access.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Server/secure/access.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="register.php (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/Server/register.php">
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -209,18 +220,20 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.main.php" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.database.php" />
       <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.register.php" />
       <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.access.php" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.register.php (1)" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.register.php" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.access.php" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.main.php" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.database.php" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.register.php (1)" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.register.php" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.access.php" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.main.php" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.database.php" />
       </list>
     </recent_temporary>
   </component>
@@ -240,12 +253,14 @@
       <workItem from="1492994009340" duration="386000" />
       <workItem from="1492994426663" duration="3514000" />
       <workItem from="1493166774052" duration="1212000" />
-      <workItem from="1493257921812" duration="1718000" />
+      <workItem from="1493257921812" duration="2374000" />
+      <workItem from="1493445143926" duration="239000" />
+      <workItem from="1493511459460" duration="429000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18502000" />
+    <option name="totallyTimeSpent" value="19826000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -257,10 +272,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="702" extended-state="0" />
+    <frame x="0" y="22" width="1280" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27382874" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2819063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -294,6 +309,58 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/secure/access.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="30" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+            <marker date="1493001722000" expanded="true" signature="1313:1358" ph="INSERT INTO Users... " />
+            <marker date="1493001722000" expanded="true" signature="1313:1386" ph="INSERT INTO Users... " />
+            <marker date="1493001722000" expanded="true" signature="1817:1852" ph="SELECT * FRO... Users" />
+            <marker date="1493001722000" expanded="true" signature="1817:1866" ph="SELECT * FRO... Users" />
+            <marker date="1493001722000" expanded="true" signature="1817:1867" ph="SELECT * FRO... Users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1493000424000" expanded="true" signature="981:1634" ph="..." />
+            <marker date="1493000424000" expanded="true" signature="1070:1634" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/secure/access.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="58" column="0" lean-forward="true" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="30" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+            <marker date="1493001722000" expanded="true" signature="1313:1358" ph="INSERT INTO Users... " />
+            <marker date="1493001722000" expanded="true" signature="1313:1386" ph="INSERT INTO Users... " />
+            <marker date="1493001722000" expanded="true" signature="1817:1852" ph="SELECT * FRO... Users" />
+            <marker date="1493001722000" expanded="true" signature="1817:1866" ph="SELECT * FRO... Users" />
+            <marker date="1493001722000" expanded="true" signature="1817:1867" ph="SELECT * FRO... Users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1493000424000" expanded="true" signature="981:1634" ph="..." />
+            <marker date="1493000424000" expanded="true" signature="1070:1634" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/secure/access.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
@@ -402,13 +469,6 @@
     <entry file="file://$PROJECT_DIR$/Database/database.php" />
     <entry file="file://$PROJECT_DIR$/Database/database.php" />
     <entry file="file://$PROJECT_DIR$/main.php" />
-    <entry file="file://$PROJECT_DIR$/SceneIt.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_4.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -425,8 +485,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/secure/access.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="73" column="30" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="30" />
+        <state relative-caret-position="795">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="30" />
           <folding>
             <element signature="e#6#92#0#PHP" expanded="true" />
             <marker date="1493001722000" expanded="true" signature="1313:1358" ph="INSERT INTO Users... " />
@@ -438,10 +498,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SceneIt.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <marker date="1493000424000" expanded="true" signature="981:1634" ph="..." />
             <marker date="1493000424000" expanded="true" signature="1070:1634" ph="..." />

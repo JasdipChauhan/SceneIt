@@ -22,7 +22,7 @@ public class Backend {
         return backendClient!;
     }
     
-    let baseURL = "http://localhost:63342/Server/register.php"
+    let baseURL = "http://192.168.0.15/SceneIt%20Server/register.php"
     
     private init() {
         
@@ -30,10 +30,29 @@ public class Backend {
     
     
     func registerUser(username: String, password: String, email: String, fullname: String) {
-    
+        
+//        let parameters : Parameters  = [
+//            "username" : username,
+//            "password" : password,
+//            "email" : email,
+//            "fullname" : fullname
+//        ]
+//        
+//        
+//        Alamofire.request(baseURL!, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON(completionHandler: {
+//            response in
+//            
+//            print(response.data!)
+//            
+//        })
+        
+        
         
         guard let requestUrl = URL(string: baseURL) else { return }
-        let request = URLRequest(url:requestUrl)
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "POST"
+        let body = "username=\(username)&password=\(password)&email=\(email)&fullname=\(fullname)"
+        request.httpBody = body.data(using: .utf8)
         
         URLSession.shared.dataTask(with: request, completionHandler: {
             (data, response, error) in
@@ -42,7 +61,6 @@ public class Backend {
                 print ("Error")
                 return
             }
-            
             
             //callback to UI thread
             DispatchQueue.main.async( execute: {
@@ -56,11 +74,12 @@ public class Backend {
                         return
                     }
                     
+                    let id = parsedJson["id"]
                     print(parsedJson)
                     
                     
                 } catch {
-                    print ("caught an error\(error)")
+                    print ("BACKEND (register user): caught an error\(error)")
                 }
                 
             })
@@ -70,8 +89,4 @@ public class Backend {
     
         
     }
-
-    
-    
-    
 }
