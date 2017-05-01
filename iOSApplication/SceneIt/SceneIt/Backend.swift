@@ -31,23 +31,6 @@ public class Backend {
     
     func registerUser(username: String, password: String, email: String, fullname: String) {
         
-//        let parameters : Parameters  = [
-//            "username" : username,
-//            "password" : password,
-//            "email" : email,
-//            "fullname" : fullname
-//        ]
-//        
-//        
-//        Alamofire.request(baseURL!, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON(completionHandler: {
-//            response in
-//            
-//            print(response.data!)
-//            
-//        })
-        
-        
-        
         guard let requestUrl = URL(string: baseURL) else { return }
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "POST"
@@ -74,7 +57,6 @@ public class Backend {
                         return
                     }
                     
-                    let id = parsedJson["id"]
                     print(parsedJson)
                     
                     

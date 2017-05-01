@@ -82,6 +82,23 @@ class access {
         return $row;
 
     }
+
+    public function saveToken($table, $id, $token) {
+
+        $sql = "INSERT INTO $table SET id=?, token=?";
+        $statement = $this->dbConn->prepare($sql);
+
+        if (!$statement) {
+            throw new Exception($statement->error);
+        }
+
+        //bind parameters to sql statement
+        $statement->bind_param("is", $id, $token);
+
+        $success = $statement->execute();
+
+        return $success;
+    }
 }
 
 ?>

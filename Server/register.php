@@ -50,6 +50,29 @@ if ($result) {
     $arrayStatus["fullname"] = $user["fullname"];
     $arrayStatus["ava"] = $user["ava"];
 
+    //4) Email preparation and execution
+    require ("secure/email.php");
+    $emailInstance = new email();
+
+    $emailToken = $emailInstance->generateToken(20);
+    echo json_encode($emailToken);
+
+    $success = $access->saveToken("emailTokens", $user["id"], $emailToken);
+    echo json_encode($success);
+
+    $details = array();
+    $details["subject"] = "Email confirmation for SceneIt";
+    $details["to"] = $user["email"];
+    $details["fromName"] = "Mr. Scene It";
+    $details["fromEmail"] = "sceneitmail@gmail.com";
+
+    $template = $emailInstance->getConfirmationTemplate();
+    $template = str_replace("{token}", $emailToken, $template);
+
+    $details["body"] = $template;
+
+    $emailInstance->sendEmail($details);
+
 } else {
     $arrayStatus["status"] = "400";
     $arrayStatus["message"] = "Could not register with the provided information";

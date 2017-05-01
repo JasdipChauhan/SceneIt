@@ -1,3 +1,4 @@
 TODO
 
+- format confirmation email
 - migrate networking to Alamofire?
