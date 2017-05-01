@@ -99,6 +99,54 @@ class access {
 
         return $success;
     }
+
+    //get user id from email token
+    public function getUserID($table, $token) {
+
+        $sql = "SELECT id FROM $table WHERE token = '".$token."'" ;
+        $result = $this->dbConn->query($sql);
+
+        $row = array();
+
+        if ($result != null && (mysqli_num_rows($result) >= 1)) {
+            $row = $result->fetch_array(MYSQLI_ASSOC);
+
+            if (!empty($row)) {
+                return $row;
+            }
+        }
+
+        return $row;
+
+    }
+
+    public function updateEmailConfirmationStatus($status, $id) {
+        $sql = "UPDATE Users SET emailConfirmation=? WHERE id=?";
+
+        $statement = $this->dbConn->prepare($sql);
+
+        if (!$statement) {
+            throw new Exception($statement->error);
+        }
+
+        $statement->bind_param("is", $status, $id);
+
+        return $statement->execute();
+    }
+
+    public function deleteToken($table, $token) {
+        $sql = "DELETE FROM $table WHERE token=?";
+        $statement = $this->dbConn->prepare($sql);
+
+        if (!$statement) {
+            throw new Exception($statement->error);
+        }
+
+        $statement->bind_param("s", $token);
+
+        return $statement->execute();
+    }
+
 }
 
 ?>
