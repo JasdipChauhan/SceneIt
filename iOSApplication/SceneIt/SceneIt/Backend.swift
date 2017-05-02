@@ -22,16 +22,16 @@ public class Backend {
         return backendClient!;
     }
     
-    let baseURL = "http://192.168.0.15/SceneIt%20Server/register.php"
+    let registrationBaseURL = "http://192.168.0.15/SceneIt%20Server/register.php"
+    let loginBaseURL = "http://192.168.0.15/SceneIt%20Server/login.php"
     
     private init() {
         
     }
     
-    
     func registerUser(username: String, password: String, email: String, fullname: String) {
         
-        guard let requestUrl = URL(string: baseURL) else { return }
+        guard let requestUrl = URL(string: registrationBaseURL) else { return }
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "POST"
         let body = "username=\(username)&password=\(password)&email=\(email)&fullname=\(fullname)"
@@ -68,7 +68,45 @@ public class Backend {
             
             
         }).resume()
+        
+    }
     
+    func loginUser(username: String, password: String) {
+        
+        guard let loginURL = URL(string: loginBaseURL) else {return}
+        var request = URLRequest(url: loginURL)
+        
+        request.httpMethod = "POST"
+        request.httpBody = "username=\(username)&password=\(password)".data(using: .utf8)
+        
+        URLSession.shared.dataTask(with: request, completionHandler: {
+            
+            (data, response, error) in
+            
+            if error != nil {
+                print ("(BACKEND LOGIN) Error: \(error.debugDescription)")
+            }
+            
+            DispatchQueue.main.async( execute: {
+                
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                    
+                    guard let parsedJSON = json else {
+                        print("error parsing json")
+                        return
+                    }
+                    
+                    print(parsedJSON)
+                    
+                } catch {
+                    print ("BACKEND (login user): caught an error\(error)")
+                }
+                
+            })
+
+            
+        }).resume()
         
     }
 }

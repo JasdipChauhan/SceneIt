@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6927BEF72F141FE197188929 /* Pods_SceneIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39F7A44C0C7B27FB07BF551 /* Pods_SceneIt.framework */; };
 		DE0977831EB01E9500195707 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0977821EB01E9500195707 /* Backend.swift */; };
+		DE1052971EB7869E00E7B14D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1052961EB7869E00E7B14D /* LoginViewController.swift */; };
 		DE7539F31EAC4DAC00A50718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7539F21EAC4DAC00A50718 /* AppDelegate.swift */; };
 		DE7539F51EAC4DAC00A50718 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7539F41EAC4DAC00A50718 /* RegistrationViewController.swift */; };
 		DE7539F81EAC4DAC00A50718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7539F61EAC4DAC00A50718 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		409E57F990601271532D6B00 /* Pods-SceneIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SceneIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SceneIt/Pods-SceneIt.debug.xcconfig"; sourceTree = "<group>"; };
 		C39F7A44C0C7B27FB07BF551 /* Pods_SceneIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SceneIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0977821EB01E9500195707 /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
+		DE1052961EB7869E00E7B14D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DE7539EF1EAC4DAC00A50718 /* SceneIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7539F21EAC4DAC00A50718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE7539F41EAC4DAC00A50718 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -80,12 +82,11 @@
 		DE7539F11EAC4DAC00A50718 /* SceneIt */ = {
 			isa = PBXGroup;
 			children = (
+				DEC0FCBE1EB6F95200214C23 /* Storyboards */,
+				DEC0FCBD1EB6F93800214C23 /* View Controllers */,
 				DE7E6A481EB01FBC00E13253 /* Clients */,
-				DE7539F41EAC4DAC00A50718 /* RegistrationViewController.swift */,
 				DE7539F21EAC4DAC00A50718 /* AppDelegate.swift */,
-				DE7539F61EAC4DAC00A50718 /* Main.storyboard */,
 				DE7539F91EAC4DAC00A50718 /* Assets.xcassets */,
-				DE7539FB1EAC4DAC00A50718 /* LaunchScreen.storyboard */,
 				DE7539FE1EAC4DAC00A50718 /* Info.plist */,
 			);
 			path = SceneIt;
@@ -97,6 +98,24 @@
 				DE0977821EB01E9500195707 /* Backend.swift */,
 			);
 			name = Clients;
+			sourceTree = "<group>";
+		};
+		DEC0FCBD1EB6F93800214C23 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE7539F41EAC4DAC00A50718 /* RegistrationViewController.swift */,
+				DE1052961EB7869E00E7B14D /* LoginViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DEC0FCBE1EB6F95200214C23 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DE7539FB1EAC4DAC00A50718 /* LaunchScreen.storyboard */,
+				DE7539F61EAC4DAC00A50718 /* Main.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1052971EB7869E00E7B14D /* LoginViewController.swift in Sources */,
 				DE7539F51EAC4DAC00A50718 /* RegistrationViewController.swift in Sources */,
 				DE7539F31EAC4DAC00A50718 /* AppDelegate.swift in Sources */,
 				DE0977831EB01E9500195707 /* Backend.swift in Sources */,

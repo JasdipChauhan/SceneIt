@@ -40,7 +40,7 @@ $result = $access->registerUser($username, $secured_password, $salt, $email, $fu
 
 if ($result) {
 
-    $user = $access->selectUser($username);
+    $user = $access->getUser($username);
 
     $arrayStatus["status"] = "200";
     $arrayStatus["message"] = "Successfully registered";
@@ -55,10 +55,8 @@ if ($result) {
     $emailInstance = new email();
 
     $emailToken = $emailInstance->generateToken(20);
-    echo json_encode($emailToken);
 
     $success = $access->saveToken("emailTokens", $user["id"], $emailToken);
-    echo json_encode($success);
 
     $details = array();
     $details["subject"] = "Email confirmation for SceneIt";
