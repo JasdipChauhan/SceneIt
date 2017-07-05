@@ -22,8 +22,8 @@ public class Backend {
         return backendClient!;
     }
     
-    let registrationBaseURL = "http://192.168.0.15/SceneIt%20Server/register.php"
-    let loginBaseURL = "http://192.168.0.15/SceneIt%20Server/login.php"
+    let registrationBaseURL = "http://10.10.9.65/SceneIt%20Server/register.php"
+    let loginBaseURL = "http://10.10.9.65/SceneIt%20Server/login.php"
     
     private init() {
         
