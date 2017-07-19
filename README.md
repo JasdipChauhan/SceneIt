@@ -1,5 +1,5 @@
 # SceneIt
-A twitter clone built on the iOS platform using a PHP backend with MySql
+A twitter clone built on the iOS platform using a Ruby on Rails backend
 
 :neckbeard::neckbeard::neckbeard::neckbeard::neckbeard::neckbeard::neckbeard::neckbeard::neckbeard::neckbeard::neckbeard::neckbeard::neckbeard::neckbeard::neckbeard:
 
