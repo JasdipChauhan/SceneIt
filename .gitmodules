@@ -1,0 +1,3 @@
+[submodule "sceneit-backend"]
+	path = sceneit-backend
+	url = https://github.com/JasdipChauhan/sceneit-backend.git
