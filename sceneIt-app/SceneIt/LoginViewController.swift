@@ -22,16 +22,16 @@ class LoginViewController: UIViewController {
     @IBAction func loginClicked(_ sender: Any) {
         
         if loginUsernameTextField.text!.isEmpty || loginPasswordTextField.text!.isEmpty {
-            loginUsernameTextField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSForegroundColorAttributeName : UIColor.red])
+            loginUsernameTextField.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSForegroundColorAttributeName : UIColor.red])
             loginPasswordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName : UIColor.red])
             
             return
         }
         
-        let username = loginUsernameTextField.text!.lowercased()
+        let email = loginUsernameTextField.text!.lowercased()
         let password = loginPasswordTextField.text!.lowercased()
         
-        Backend.getInstance().loginUser(username: username, password: password)
+        Backend.getInstance().loginUser(email: email, password: password)
         
     }
     
