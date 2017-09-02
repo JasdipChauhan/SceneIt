@@ -20,15 +20,15 @@ public class ProfileManager {
         return profileManager!
     }
     
-    private static var currentUser: User?
+    private var currentUser: User?
     
     //PUBLIC METHODS
     
-    public static func setCurrentUser(id: Int, email: String, apiToken: String) {
+    public func setCurrentUser(id: Int, email: String, apiToken: String) {
         currentUser = User(id: id, email: email, apiToken: apiToken)
     }
     
-    public static func getCurrentUser() -> User? {
+    public func getCurrentUser() -> User? {
         return currentUser
     }
     
@@ -38,7 +38,7 @@ public class ProfileManager {
     private init() {}
     
     private func isUserValid () -> Bool {
-        guard let user = ProfileManager.currentUser else {
+        guard let user = self.currentUser else {
             return false
         }
         

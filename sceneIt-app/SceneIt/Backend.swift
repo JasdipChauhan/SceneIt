@@ -23,12 +23,14 @@ public class Backend {
     }
     
     let baseURL : String = "http://192.168.0.22:3000/"
+    let tokenHeader : String = "X-User-Token"
+    let emailHeader : String = "X-User-Email"
     
     private init() {
         
     }
     
-    func loginUser(email: String, password: String, completionHandler: @escaping (_ result: Bool) -> Void) {
+    public func loginUser(email: String, password: String, completionHandler: @escaping (Bool) -> Void) {
         
         let url = baseURL + "v1/sessions"
         
@@ -64,13 +66,13 @@ public class Backend {
                     return
                 }
             
-            ProfileManager.setCurrentUser(id: id, email: email, apiToken: apiToken)
+            ProfileManager.getProfileManager().setCurrentUser(id: id, email: email, apiToken: apiToken)
             
             completionHandler(true)
         }
     }
     
-    func registerUser(username: String, password: String, email: String, fullname: String) {
+    public func registerUser(username: String, password: String, email: String, fullname: String) {
         
 //        guard let requestUrl = URL(string: baseURL) else { return }
 //        var request = URLRequest(url: requestUrl)
@@ -109,7 +111,53 @@ public class Backend {
 //            
 //            
 //        }).resume()
+    }
+    
+    //MARK: Business Logic Methods
+    
+    public func getPosts(completionHandler: @escaping (Bool, Array<Post>?) -> Void) {
         
+        let user = ProfileManager.getProfileManager().getCurrentUser()!
+        
+        let url = baseURL + "v1/posts"
+        let headers = [
+            tokenHeader: user.apiToken,
+            emailHeader: user.email
+        ]
+        
+        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+            
+            if response.result.isFailure {
+                print("REQUEST FAILURE\(response.result.debugDescription)")
+                completionHandler(false, nil)
+                return
+            }
+            
+            guard let json = response.result.value! as? Dictionary<String, AnyObject> else {
+                print("BACKEND ERROR: PARSE ERROR")
+                completionHandler(false, nil)
+                return
+            }
+            guard let data = json["data"]! as? [Dictionary<String, AnyObject>] else {
+                print("BACKEND ERROR: PARSE ERROR")
+                completionHandler(false, nil)
+                return
+            }
+            
+            var postList: Array<Post> = []
+            
+            for postJSON in data {
+                let id = postJSON["id"] as! Int
+                let title = postJSON["title"] as! String
+                let description = postJSON["description"] as! String
+                let likes = postJSON["likes"] as! Int
+                
+                let post = Post(id: id, title: title, description: description, likes: likes)
+                postList.append(post)
+            }
+            
+            completionHandler(true, postList)
+        }
     }
     
     //Helpers

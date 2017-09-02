@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6927BEF72F141FE197188929 /* Pods_SceneIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39F7A44C0C7B27FB07BF551 /* Pods_SceneIt.framework */; };
 		DE0977831EB01E9500195707 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0977821EB01E9500195707 /* Backend.swift */; };
-		DE1052971EB7869E00E7B14D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1052961EB7869E00E7B14D /* LoginViewController.swift */; };
 		DE39F2C11F5A6439000A17E7 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39F2C01F5A6439000A17E7 /* ProfileManager.swift */; };
 		DE39F2C51F5A6504000A17E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39F2C41F5A6504000A17E7 /* User.swift */; };
 		DE7539F31EAC4DAC00A50718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7539F21EAC4DAC00A50718 /* AppDelegate.swift */; };
@@ -17,6 +16,9 @@
 		DE7539F81EAC4DAC00A50718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7539F61EAC4DAC00A50718 /* Main.storyboard */; };
 		DE7539FA1EAC4DAC00A50718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE7539F91EAC4DAC00A50718 /* Assets.xcassets */; };
 		DE7539FD1EAC4DAC00A50718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7539FB1EAC4DAC00A50718 /* LaunchScreen.storyboard */; };
+		DED9FD641F5B127C00C4A3C7 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9FD631F5B127C00C4A3C7 /* PostTableViewController.swift */; };
+		DED9FD661F5B12E200C4A3C7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9FD651F5B12E200C4A3C7 /* LoginViewController.swift */; };
+		DED9FD681F5B1B4600C4A3C7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9FD671F5B1B4600C4A3C7 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +26,6 @@
 		409E57F990601271532D6B00 /* Pods-SceneIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SceneIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SceneIt/Pods-SceneIt.debug.xcconfig"; sourceTree = "<group>"; };
 		C39F7A44C0C7B27FB07BF551 /* Pods_SceneIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SceneIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0977821EB01E9500195707 /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
-		DE1052961EB7869E00E7B14D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DE39F2C01F5A6439000A17E7 /* ProfileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		DE39F2C41F5A6504000A17E7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DE7539EF1EAC4DAC00A50718 /* SceneIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +35,9 @@
 		DE7539F91EAC4DAC00A50718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE7539FC1EAC4DAC00A50718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE7539FE1EAC4DAC00A50718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DED9FD631F5B127C00C4A3C7 /* PostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
+		DED9FD651F5B12E200C4A3C7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../../../../.Trash/LoginViewController.swift; sourceTree = "<group>"; };
+		DED9FD671F5B1B4600C4A3C7 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				DE39F2C41F5A6504000A17E7 /* User.swift */,
+				DED9FD671F5B1B4600C4A3C7 /* Post.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -118,7 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				DE7539F41EAC4DAC00A50718 /* RegistrationViewController.swift */,
-				DE1052961EB7869E00E7B14D /* LoginViewController.swift */,
+				DED9FD651F5B12E200C4A3C7 /* LoginViewController.swift */,
+				DED9FD631F5B127C00C4A3C7 /* PostTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -261,11 +267,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE1052971EB7869E00E7B14D /* LoginViewController.swift in Sources */,
 				DE39F2C11F5A6439000A17E7 /* ProfileManager.swift in Sources */,
 				DE39F2C51F5A6504000A17E7 /* User.swift in Sources */,
 				DE7539F51EAC4DAC00A50718 /* RegistrationViewController.swift in Sources */,
+				DED9FD681F5B1B4600C4A3C7 /* Post.swift in Sources */,
+				DED9FD661F5B12E200C4A3C7 /* LoginViewController.swift in Sources */,
 				DE7539F31EAC4DAC00A50718 /* AppDelegate.swift in Sources */,
+				DED9FD641F5B127C00C4A3C7 /* PostTableViewController.swift in Sources */,
 				DE0977831EB01E9500195707 /* Backend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
