@@ -22,61 +22,52 @@ public class Backend {
         return backendClient!;
     }
     
-    static let baseURL : String = "localhost:3000"
+    let baseURL : String = "http://192.168.0.22:3000/"
     
-    private init() {}
+    private init() {
+        
+    }
     
-    func loginUser(email: String, password: String) {
+    func loginUser(email: String, password: String, completionHandler: @escaping (_ result: Bool) -> Void) {
+        
+        let url = baseURL + "v1/sessions"
         
         let loginCreds: Parameters = [
             "email" : email,
             "password" : password
         ]
         
-        let headers: HTTPHeaders = [
-            "X-User-Token": "mQEi1S5Qpi-kNpFnz22E",
-            "X-User-Email": "jasdip.chauhan@gmail.com"
-        ]
-        
-        Alamofire.request("10.10.9.65:5000/v1/posts", method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).response { response in
+        Alamofire.request(url, method: .post, parameters: loginCreds, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
             
-            print (response.data)
+            if response.result.isFailure {
+                print("REQUEST FAILURE\(response.result.debugDescription)")
+                completionHandler(false)
+                return
+            }
+            
+            guard let json = response.result.value! as? Dictionary<String, AnyObject> else {
+                print("BACKEND ERROR: PARSE ERROR")
+                completionHandler(false)
+                return
+            }
+            guard let user = json["data"]!["user"] as? Dictionary<String, AnyObject> else {
+                print("BACKEND ERROR: PARSE ERROR")
+                completionHandler(false)
+                return
+            }
+            
+            guard let id = user["id"] as? Int,
+                let apiToken = user["authentication_token"] as? String,
+                let email = user["email"] as? String
+                else {
+                    completionHandler(false)
+                    return
+                }
+            
+            ProfileManager.setCurrentUser(id: id, email: email, apiToken: apiToken)
+            
+            completionHandler(true)
         }
-        
-//        var request = URLRequest(url: loginURL)
-//        
-//        request.httpMethod = "POST"
-//        request.httpBody = "username=\(username)&password=\(password)".data(using: .utf8)
-//        
-//        URLSession.shared.dataTask(with: request, completionHandler: {
-//            
-//            (data, response, error) in
-//            
-//            if error != nil {
-//                print ("(BACKEND LOGIN) Error: \(error.debugDescription)")
-//            }
-//            
-//            DispatchQueue.main.async( execute: {
-//                
-//                do {
-//                    let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
-//                    
-//                    guard let parsedJSON = json else {
-//                        print("error parsing json")
-//                        return
-//                    }
-//                    
-//                    print(parsedJSON)
-//                    
-//                } catch {
-//                    print ("BACKEND (login user): caught an error\(error)")
-//                }
-//                
-//            })
-//            
-//            
-//        }).resume()
-        
     }
     
     func registerUser(username: String, password: String, email: String, fullname: String) {

@@ -10,6 +10,8 @@
 		6927BEF72F141FE197188929 /* Pods_SceneIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39F7A44C0C7B27FB07BF551 /* Pods_SceneIt.framework */; };
 		DE0977831EB01E9500195707 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0977821EB01E9500195707 /* Backend.swift */; };
 		DE1052971EB7869E00E7B14D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1052961EB7869E00E7B14D /* LoginViewController.swift */; };
+		DE39F2C11F5A6439000A17E7 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39F2C01F5A6439000A17E7 /* ProfileManager.swift */; };
+		DE39F2C51F5A6504000A17E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39F2C41F5A6504000A17E7 /* User.swift */; };
 		DE7539F31EAC4DAC00A50718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7539F21EAC4DAC00A50718 /* AppDelegate.swift */; };
 		DE7539F51EAC4DAC00A50718 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7539F41EAC4DAC00A50718 /* RegistrationViewController.swift */; };
 		DE7539F81EAC4DAC00A50718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7539F61EAC4DAC00A50718 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		C39F7A44C0C7B27FB07BF551 /* Pods_SceneIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SceneIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0977821EB01E9500195707 /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
 		DE1052961EB7869E00E7B14D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DE39F2C01F5A6439000A17E7 /* ProfileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		DE39F2C41F5A6504000A17E7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DE7539EF1EAC4DAC00A50718 /* SceneIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7539F21EAC4DAC00A50718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE7539F41EAC4DAC00A50718 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DE39F2C21F5A64EC000A17E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE39F2C41F5A6504000A17E7 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		DE7539E61EAC4DAC00A50718 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +94,7 @@
 		DE7539F11EAC4DAC00A50718 /* SceneIt */ = {
 			isa = PBXGroup;
 			children = (
+				DE39F2C21F5A64EC000A17E7 /* Models */,
 				DEC0FCBE1EB6F95200214C23 /* Storyboards */,
 				DEC0FCBD1EB6F93800214C23 /* View Controllers */,
 				DE7E6A481EB01FBC00E13253 /* Clients */,
@@ -96,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				DE0977821EB01E9500195707 /* Backend.swift */,
+				DE39F2C01F5A6439000A17E7 /* ProfileManager.swift */,
 			);
 			name = Clients;
 			sourceTree = "<group>";
@@ -248,6 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE1052971EB7869E00E7B14D /* LoginViewController.swift in Sources */,
+				DE39F2C11F5A6439000A17E7 /* ProfileManager.swift in Sources */,
+				DE39F2C51F5A6504000A17E7 /* User.swift in Sources */,
 				DE7539F51EAC4DAC00A50718 /* RegistrationViewController.swift in Sources */,
 				DE7539F31EAC4DAC00A50718 /* AppDelegate.swift in Sources */,
 				DE0977831EB01E9500195707 /* Backend.swift in Sources */,
